@@ -40,4 +40,29 @@ Most often for a CSV file it is “,” but sometimes it can be “ ; “, so yo
      - Press 3 to exit the script without taking any action.
 4. Follow the on-screen instructions based on your choice.
 
+# Error Handling
+The script includes basic error handling. If an invalid tenant ID, subscription ID, or resource group name is detected, the script will notify the user and move on to the next record in the CSV file. Additionally, if an invalid input is provided at the initial selection prompt, the script will loop until a valid option (1, 2, or 3) is chosen.
+
+
+# Example CSV File Format
+The CSV file used for adding or updating tags should follow the format below:
+```
+TenantId,TenantName,SubscriptionId,SubscriptionName,ResourceGroupName,Tag1,Tag2,...
+<tenant-id>,<tenantName>,<subscription-id>,<subscriptionName>,<resourceGroupName>,<tag-value-1>,<tag-value-2>,...
+```
+
+![image](https://github.com/user-attachments/assets/705d406e-e133-4414-a42a-10d30de1ef4b)
+
+# Appendix
+For further support, please refer to the Microsoft Azure PowerShell documentation or contact your system administrator.
+
+# User Variables to Modify
+The script contains several variables that may need to be updated by the user depending on the environment or specific use case. Below is a list of important variables that the user should review and modify if necessary:
+1. `$fileBeforeChanges` - This variable holds the name for the CSV file that stores resource group and tag data before any changes are applied. Update the file name if you want the report to be saved with a specific name.
+2. `$fileAfterChanges` - This variable holds the name for the CSV file that stores resource group and tag data after changes are made. Update the file name if needed.
+3. ‘$fileName’ – This variable holds the name for the CSV file that stores resources for option 1 in the script. 
+These variables are defined at the beginning of the script and can be modified before running the script to meet specific requirements.
+
+
+
 
