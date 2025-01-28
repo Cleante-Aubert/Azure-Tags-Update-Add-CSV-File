@@ -1,5 +1,3 @@
-# VARIABLES CLIENT
-
 # File name that retrieves all tags before the tag modification step.
 $fileBeforeChanges = "Azure_ressources_tag_before_changes"
 
@@ -8,9 +6,6 @@ $fileAfterChanges = 'Azure_ressources_tag_after_changes'
 
 # Variable for the name of the report for option 1 (Write all tags from resource groups in CSV file)
 $fileName   = "Repport_all_tags"
-
-# TODO : ajouter une partie de récupération en cas d'erreur sur certains tags d'assignements de valeurs .
-
 
 # ----------------------------------------
 
